@@ -1,10 +1,13 @@
 package com.interview.array;
 /**
+ * Given n non-negative integers representing an elevation map where the width of each bar is 1, 
+ * compute how much water it is able to trap after raining.
+ * 
  * https://oj.leetcode.com/problems/trapping-rain-water/
  */
 public class TrappingWater {
 
-    public int trapWater(int input[]){
+    public int trapWater1(int input[]){
         if(input.length < 2){
             return 0;
         }
@@ -47,7 +50,7 @@ public class TrappingWater {
      * @param input
      * @return
      */
-    public int trapWater1(int input[]){
+    public int trapWater2(int input[]){
         assert input != null && input.length > 0;
         int left[] = new int[input.length];
         int right[] = new int[input.length];
@@ -70,10 +73,42 @@ public class TrappingWater {
         return result;
     }
     
+    /**
+     * Best Approach
+     * Time complexity: O(n). Single iteration of O(n).
+     * Space complexity: O(1) extra space. 
+     * Only constant space required for left, right, left_max and right_max .
+     */
+    public int trapWater3(int input[]) {
+        int left = 0, right = input.length - 1;
+        int ans = 0;
+        int left_max = 0, right_max = 0;
+        while (left < right) {
+            if(input[left] < input[right]) {
+            	if(input[left] >= left_max)
+            		left_max = input[left];
+            	else 
+            		ans += (left_max - input[left]);
+            	
+                ++left;
+            }
+            else {
+            	if(input[right] >= right_max) 
+            		right_max = input[right];
+            	else 
+            		ans += (right_max - input[right]);
+            	
+                --right;
+            }
+        }
+        return ans;
+    }
+    
     public static void main(String args[]){
-        int input[] = {0,1,0,2,1,0,1,3,2,1,2,1};
+        int input[] = {0,1,1,1,0};
         TrappingWater tw = new TrappingWater();
-        System.out.println(tw.trapWater(input));
         System.out.println(tw.trapWater1(input));
+        System.out.println(tw.trapWater2(input));
+        System.out.println(tw.trapWater3(input));
     }
 }
