@@ -96,7 +96,7 @@ public class TextJustification {
     }
     
     public static void main(String args[]){
-        String words1[] = {"Tushar","likes","to","write","code","at", "free", "time"};
+        String words1[] = {"Piyush","likes","to","write","code","at", "free", "time"};
         TextJustification awl = new TextJustification();
         System.out.println(awl.justify(words1, 12));
     }

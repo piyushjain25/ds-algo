@@ -37,7 +37,7 @@ public class MoveFromCurrentToNewFolder {
     
     public static void main(String args[]){
         String absCurrentFolder = "/home/pjain";
-        String relativeNewFolder = "Desktop/.././Download/../../Tushar";
+        String relativeNewFolder = "Desktop/.././Download/../../Piyush";
         MoveFromCurrentToNewFolder mfc = new MoveFromCurrentToNewFolder();
         System.out.println(mfc.moveFolder(absCurrentFolder, relativeNewFolder));
     }

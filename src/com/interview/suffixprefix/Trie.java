@@ -91,12 +91,12 @@ public class Trie {
     public static void main(String args[]){
         Trie t = new Trie();
         t.insert("A".toCharArray());
-        t.insert("Tushar".toCharArray());
-        t.insert("TusharRoy".toCharArray());
+        t.insert("Piyush".toCharArray());
+        t.insert("PiyushJain".toCharArray());
         t.insert("Anisweta".toCharArray());
         t.insert("AniswetaS".toCharArray());
         t.displayTrie(t.root);
-        t.delete("TusharRoy".toCharArray());
+        t.delete("PiyushJain".toCharArray());
         t.displayTrie(t.root);
     }
     

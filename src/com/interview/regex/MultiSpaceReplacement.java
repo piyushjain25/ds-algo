@@ -9,11 +9,10 @@ public class MultiSpaceReplacement {
         Pattern pattern = Pattern.compile("^ +|  +| +$");
         Matcher matcher = pattern.matcher(str);
         System.out.println(matcher.replaceAll(""));
-        
     }
     
     public static void main(String args[]){
-        String str = "     This is Tushar  Roy  ";
+        String str = "     This is Piyush  Jain  ";
         MultiSpaceReplacement mrs = new MultiSpaceReplacement();
         mrs.replace(str);
     }

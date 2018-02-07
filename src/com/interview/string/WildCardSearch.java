@@ -5,7 +5,7 @@ package com.interview.string;
  */
 public class WildCardSearch {
 
-    //Tushar Roy , Tus*oy ->returns true. So does wild card char search
+    //Piyush Jain, Piyus*oy ->returns true. So does wild card char search
     public boolean searchStar(char mainStr[], char pattern[]){
         for(int i= 0; i < mainStr.length ; i++){
             boolean r = searchStar(mainStr, pattern, i, 0);
@@ -39,7 +39,7 @@ public class WildCardSearch {
     }
     
     public static void main(String args[]){
-        String str = "Tusssshar Roy";
+        String str = "Piyussssh Jain";
         String pattern = "us*s";
         WildCardSearch psw = new WildCardSearch();
         System.out.println(psw.searchStar(str.toCharArray(), pattern.toCharArray()));
