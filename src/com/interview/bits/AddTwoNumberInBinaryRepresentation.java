@@ -44,7 +44,7 @@ public class AddTwoNumberInBinaryRepresentation {
         int result = 0;
         for(int i=0; i <=31; i++){
             int r1 = (num1 & 1<<i) != 0 ? 1 : 0;
-            int r2 = (num2 & 1<<i) !=0 ? 1 : 0;
+            int r2 = (num2 & 1<<i) != 0 ? 1 : 0;
             
             result = result | (r1^r2^carry)<<i;
             if((r1 & r2) != 0 || (r1 & carry) != 0 || (r2 & carry) != 0){
@@ -80,9 +80,12 @@ public class AddTwoNumberInBinaryRepresentation {
         char num1[] = "1010001110".toCharArray();
         char num2[] = "10011".toCharArray();
         int result = anp.add(num1, num2);
+        anp.printResult(result);
+        System.out.println();
+        
         System.out.println(anp.addTwoNumbersWithoutArithmeticOperator(296, 5662));
         System.out.println(anp.addTwoNumbersWithoutArithmeticOperatorFaster(296, 5662));
-        anp.printResult(result);
+        
     }
     
 }

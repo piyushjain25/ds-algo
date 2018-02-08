@@ -9,7 +9,7 @@ public class ShuffleArray {
 	public void shuffle(int arr[]){
 		for(int i=arr.length-1; i>=0; i--){
 			int random = (int)(Math.random()*(i+1)) ;
-			System.out.print(random +  " ");
+			//System.out.print(random +  " ");
 			swap(arr,random,i);
 		}
 	}
@@ -24,13 +24,13 @@ public class ShuffleArray {
 		int arr[] = {1,2,3,4,5,6,7,8};
 		ShuffleArray sa = new ShuffleArray();
 		sa.shuffle(arr);
-		System.out.println();
+		//System.out.println();
 		for(int i=0; i < arr.length; i++){
 			System.out.print(arr[i] + " ");
 		}
-		
+		/*System.out.println();
 		for(int i=0; i < arr.length; i++){
-			System.out.println((int)(Math.random()*10) + 1);
-		}
+			System.out.print(((int)(Math.random()*10) + 1) + " ");
+		}*/
 	}
 }

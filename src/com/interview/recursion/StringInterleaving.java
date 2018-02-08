@@ -22,7 +22,7 @@ public class StringInterleaving {
         }
         if(len2 < str2.length){
             result[current] = str2[len2];
-            interleaving(str1,str2,len1,len2+1,current+1,result);
+            interleaving(str1, str2, len1, len2+1, current+1, result);
         }
     }
     

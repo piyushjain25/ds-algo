@@ -6,7 +6,7 @@ package com.interview.binarysearch;
 public class ArithmeticProgressionSearch {
 
     public int search(int input[]){
-        int low =0;
+        int low = 0;
         int high = input.length-1;
         int ap = (input[high] - input[low])/(input.length);
         int middle = -1;

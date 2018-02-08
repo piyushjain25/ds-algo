@@ -9,7 +9,7 @@ public class Combination {
         System.out.println();
     }
     
-    private void combination(int arr[],int pos,int start,int result[]){
+    private void combination(int arr[], int pos, int start, int result[]){
     
         printArray(result,pos);
         for(int i = start ; i < arr.length; i++){

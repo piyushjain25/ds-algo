@@ -4,6 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Input: {1, 1}
+ * Output: ("aa", 'k") 
+ * [2 interpretations: aa(1, 1), k(11)]
+
+ * Input: {1, 2, 1}
+ * Output: ("aba", "au", "la") 
+ * [3 interpretations: aba(1,2,1), au(1,21), la(12,1)]
+
+ * Input: {9, 1, 8}
+ * Output: {"iah", "ir"} 
+ * [2 interpretations: iah(9,1,8), ir(9,18)]
+
  * http://www.geeksforgeeks.org/find-all-possible-interpretations/
  */
 public class InterpretationOfArray {
@@ -55,7 +67,7 @@ public class InterpretationOfArray {
         if(number > 26 || number <= 0){
             return '0';
         }
-        return (char)('a' + number -1);
+        return (char)('a' + number - 1);
     }
     
     public static void main(String args[]){
